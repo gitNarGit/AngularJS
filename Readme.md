@@ -30,3 +30,8 @@ AngularJS frees you from the following pains:
 - Manipulating HTML DOM programmatically
 - Marshaling data to and from the UI
 - Writing tons of initialization code just to get started
+
+AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:
+```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+```
