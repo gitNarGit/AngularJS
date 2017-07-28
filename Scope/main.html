@@ -1,0 +1,26 @@
+<!--Scope is an object that refers to the application model. 
+It is an execution context for expressions. 
+Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. 
+Scopes can watch expressions and propagate events.-->
+
+<!--When you make a controller in AngularJS, you pass the $scope object as an argument:-->
+
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1>{{carname}}</h1>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.carname = "Volvo";
+});
+</script> <!--The property "carname" was made in the controller, and can be referred to in the view by using the {{ }} brackets.-->
+
+</body>
+</html>
