@@ -1,0 +1,35 @@
+<!--At a high level, directives are markers on a DOM element that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element, 
+or even to transform the DOM element and its children.-->
+
+<!--AngularJS comes with a set of these directives built-in, like ngBind, ngModel, and ngClass.-->
+
+<!--The ng-app directive initializes an AngularJS application.
+
+The ng-init directive initializes application data.
+
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.-->
+
+
+<!--In the following example, we say that the <input> element matches the ngModel directive-->
+<input ng-model="foo">
+
+<!--The following <input> element also matches ngModel:-->
+<input data-ng-model="foo">
+
+<!--And the following <person> element matches the person directive:-->
+<person>{{name}}</person>
+
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="firstName='John'">
+
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="firstName"></p>
+<p>You wrote: {{ firstName }}</p>
+
+</div>
+
+</body>
+</html>
