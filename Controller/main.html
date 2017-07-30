@@ -1,0 +1,41 @@
+<!--AngularJS controllers control the data of AngularJS applications.
+
+AngularJS controllers are regular JavaScript Objects.-->
+
+<!--AngularJS applications are controlled by controllers.
+The ng-controller directive defines the application controller.-->
+
+<!--Example-->
+
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+
+</body>
+</html>
+
+<!--Application explained:
+The AngularJS application is defined by  ng-app="myApp". The application runs inside the <div>.
+The ng-controller="myCtrl" attribute is an AngularJS directive. It defines a controller.
+The myCtrl function is a JavaScript function.
+AngularJS will invoke the controller with a $scope object.
+In AngularJS, $scope is the application object (the owner of application variables and functions).
+The controller creates two properties (variables) in the scope (firstName and lastName).
+The ng-model directives bind the input fields to the controller properties (firstName and lastName).-->
